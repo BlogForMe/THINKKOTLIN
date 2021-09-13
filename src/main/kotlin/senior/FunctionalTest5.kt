@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 fun main() {
     val list1 = listOf("jon", "john1", "john2")

@@ -1,4 +1,4 @@
-package main.java.medium
+package medium
 
 fun main() {
     val map = mapOf("lucy1" to 18, "lucy2" to 19, "lucy3" to 20) //to调用to方法生成Pair

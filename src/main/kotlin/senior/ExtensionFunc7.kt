@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 import java.io.File
 

@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 fun main() {
     val animals = listOf("zebra", "giraffe", "elephant", "rat")

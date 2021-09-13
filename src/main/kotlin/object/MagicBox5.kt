@@ -1,7 +1,6 @@
-package main.java.`object`
+package `object`
 
-/*
-class MagicBox<T : Human>(vararg item: T) {
+class MagicBox5<T : Human>(vararg item: T) {
     var available = false
     protected var subject: Array<out T> = item //可变参数 必须写out
     fun fetch(index: Int): T? {
@@ -23,7 +22,7 @@ class Man(val name: String, age: Int) : Human(age)
 class Dog(val weight: Int)
 
 fun main() {
-    val box1 = MagicBox(Boy("John", 20), Boy("Jack", 20), Boy("Jon", 20))
+    val box1 = MagicBox5(Boy("John", 20), Boy("Jack", 20), Boy("Jon", 20))
     box1.available = true
     box1.fetch(1)?.run {
         println("you find $name")
@@ -32,4 +31,3 @@ fun main() {
         Man(it.name, it.age.plus(15))
     }
 }
-*/

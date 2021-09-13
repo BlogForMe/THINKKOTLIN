@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 /*
 //给字符串追加若干个 !

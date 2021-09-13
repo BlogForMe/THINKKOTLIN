@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 fun main() {
     // 除了1和它本身， 不梦被任何数整除的数

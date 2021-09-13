@@ -1,4 +1,4 @@
-package main.java.elementary
+package elementary
 
 import java.lang.Exception
 

@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 // out
 interface Production<out T> {

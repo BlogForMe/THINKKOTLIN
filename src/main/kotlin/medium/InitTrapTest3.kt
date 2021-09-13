@@ -1,4 +1,4 @@
-package main.java.medium
+package medium
 
 class InitTrapTest3(_name:String) {
     val playerName:String = initPlayerName()

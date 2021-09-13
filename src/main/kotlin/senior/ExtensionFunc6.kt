@@ -1,6 +1,6 @@
-package main.java.senior
+package senior
 
-import main.java.extension.randomTake as Randomizer
+import extension.randomTake as Randomizer
 
 
 fun main() {

@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 /*
 class MagicBox<T>(item:T){

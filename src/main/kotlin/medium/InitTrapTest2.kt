@@ -1,4 +1,4 @@
-package main.java.medium
+package medium
 
 class Player7 {
    val name:String //类级别属性

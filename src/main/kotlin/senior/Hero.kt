@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 import senior.Jhava
 import java.io.IOException

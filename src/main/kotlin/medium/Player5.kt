@@ -1,4 +1,4 @@
-package main.java.medium
+package medium
 
 class Player5(_name: String) {
     var name = _name

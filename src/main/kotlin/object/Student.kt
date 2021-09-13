@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 data  class Student(
         var name: String,

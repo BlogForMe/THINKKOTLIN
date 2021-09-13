@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 open class Player {
     open fun load() = "loading nothing.."

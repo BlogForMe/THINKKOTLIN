@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 abstract class Gun(val range: Int) {
     abstract fun pullTrigger(): String

@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 fun main() {
     val result = listOf("Jack","Jimmy","Rose","Tom").filter {

@@ -1,7 +1,6 @@
-package main.java.`object`
+package `object`
 
-/*
-class MagicBox<T:Human>(item: T) {
+/*class MagicBox4<T:Human>(item: T) {      //这里添加约束
     var available = false
     protected var subject: T = item
     fun fetch(): T? {
@@ -22,8 +21,8 @@ class Man(val name: String,  age: Int):Human(age)
 class Dog(val weight: Int)
 
 fun main() {
-    val box1 = MagicBox(Boy("John", 20))
-//    val box2 = MagicBox(Dog(20))
+    val box1 = MagicBox4(Boy("John", 20))
+//    val box2 = MagicBox4(Dog(20)) ////因为约束类型，导致这里会报错
     box1.available = true
     box1.fetch()?.run {
         println("you find $name")
@@ -32,5 +31,4 @@ fun main() {
     val fetch = box1.fetch {
         Man(it.name, it.age.plus(15))
     }
-}
-*/
+}*/

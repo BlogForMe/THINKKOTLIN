@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 //fun String?.printWithDefault(default:String) =print(this ?: default) //null打印默认值,不为null 打印自身
 infix fun String?.printWithDefault(default:String) =print(this ?: default) //null打印默认值,不为null 打印自身

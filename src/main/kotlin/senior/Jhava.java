@@ -3,8 +3,8 @@ package senior;
 import com.sun.istack.internal.Nullable;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
-import main.java.senior.HeroKt;
-import main.java.senior.SpellBook;
+import senior.HeroKt;
+import senior.SpellBook;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 data class Coordinate(var x:Int,var y:Int) {
     val isInBounds = x > 0 && y > 0

@@ -1,4 +1,4 @@
-package main.java.medium
+package medium
 
 class Player4 {
     lateinit var equipment:String

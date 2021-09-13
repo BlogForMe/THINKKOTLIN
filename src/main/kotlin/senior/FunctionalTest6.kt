@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 //判断是否是素数
 fun Int.isPrime(): Boolean {

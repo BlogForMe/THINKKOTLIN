@@ -1,4 +1,4 @@
-package main.java.senior
+package senior
 
 class SpellBook {
     val spells = listOf("Magic Ms . L", "Lay onHans")

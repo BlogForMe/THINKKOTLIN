@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 class PlayerScore(val experience:Int,val level:Int) {
     operator fun component1() = experience

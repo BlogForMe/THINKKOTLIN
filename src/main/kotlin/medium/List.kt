@@ -1,4 +1,4 @@
-package main.java.medium
+package medium
 
 fun main() {
     val list = listOf("girl1", "girl2", "girl3")

@@ -1,4 +1,4 @@
-package main.java.`object`
+package `object`
 
 //密封类
 sealed class LicenseStatus2 {
