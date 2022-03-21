@@ -13,7 +13,6 @@ class MagicBox5<T : Human>(vararg item: T) {
     fun <R> fetch(index: Int, subjectModFunction: (T) -> R): R? {
         return subjectModFunction(subject[index]).takeIf { available }
     }
-
 }
 
 open class Human(val age: Int)
@@ -21,13 +20,21 @@ class Boy(val name: String, age: Int) : Human(age)
 class Man(val name: String, age: Int) : Human(age)
 class Dog(val weight: Int)
 
+fun refreshFont(vararg arr:Int){
+    arr.forEach {
+        println(it)
+    }
+}
+
 fun main() {
-    val box1 = MagicBox5(Boy("John", 20), Boy("Jack", 20), Boy("Jon", 20))
-    box1.available = true
-    box1.fetch(1)?.run {
-        println("you find $name")
-    }
-    val fetch = box1.fetch(2) {
-        Man(it.name, it.age.plus(15))
-    }
+//    val box1 = MagicBox5(Boy("John", 20), Boy("Jack", 20), Boy("Jon", 20))
+//    box1.available = true
+//    box1.fetch(1)?.run {
+//        println("you find $name")
+//    }
+//    val fetch = box1.fetch(2) {
+//        Man(it.name, it.age.plus(15))
+//    }
+//
+    refreshFont(1,2,3)
 }

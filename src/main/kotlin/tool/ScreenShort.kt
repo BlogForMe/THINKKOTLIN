@@ -13,21 +13,18 @@ fun main() {
     }
     println(filterNames)
 
-    filterNames.forEach{
-        val (l1,l2,l3,l4,l5) = it.split(" ")
+    filterNames.forEach {
+        val (l1, l2, l3, l4, l5) = it.split(" ")
         println("$l1  $l2  $l3  $l4  $l5  ")
         println("${l3}_${l5}_")
-        val newName=File(FILE_NAME+"${l3}_${l5}_.png")
+        val newName = File(FILE_NAME + "${l3}_${l5}.png")
         println("newName $newName")
-//    var flag = File("/Users/m/Desktop/$filterName").renameTo(newName)
-//    println(flag)
-        println("oldName"+FILE_NAME+it)
+        println("oldName$FILE_NAME$it")
 
-        var flag = File(FILE_NAME+it).renameTo(newName)
+        var flag = File(FILE_NAME + it).renameTo(newName)
         println(flag)
 
     }
-
 
 
 }

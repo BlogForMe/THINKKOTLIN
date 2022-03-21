@@ -24,19 +24,33 @@ fun main() {
     }
     println(level)
 
+
+    var osd = when {
+        isOdd() -> print("x is odd")
+        isEven() -> print("y is even")
+        else -> print("x+y is odd")
+    }
+
+    println("osd $osd")
+
     /**
      * String模版
      */
     val flag = false
     println("Answer is : ${if (flag) "我可以" else "I can play"}")
 
-    TODO("nothing")
     printUser("Jon")
     printUser(name = "john")
 
-
-
 }
+
+fun isOdd():Boolean{
+    return false
+}
+fun isEven():Boolean{
+    return false
+}
+
 
 fun printUser(name:String,age:Int=2){
     println(name+age)
