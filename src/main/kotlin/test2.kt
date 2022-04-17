@@ -15,4 +15,6 @@ fun main() {
     val b = ss is String
     print(b)
 
+    "".uppercase()
+
 }

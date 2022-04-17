@@ -3,8 +3,8 @@ import java.io.File
 /**
  * 修改截图文件名称
  */
-//const val FILE_NAME = "/Users/m/Documents/workspace/THINKJAVA/THINKKOTLIN/src/image/"
-const val FILE_NAME = "/Users/m/Desktop/"
+const val FILE_NAME = "/Users/m/Documents/BLOG/source/_posts/CaptureApp/"
+//const val FILE_NAME = "/Users/m/Desktop/"
 
 fun main() {
     val file = File(FILE_NAME)
