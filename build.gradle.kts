@@ -15,6 +15,7 @@ repositories {
 dependencies {
     implementation("org.junit.jupiter:junit-jupiter:5.8.1")
     testImplementation(kotlin("test"))
+    testImplementation("junit:junit:4.13")
 
     implementation("com.squareup:kotlinpoet:1.11.0")
     implementation("com.alibaba:easyexcel:3.0.5")
