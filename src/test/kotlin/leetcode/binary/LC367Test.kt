@@ -1,8 +1,9 @@
 package leetcode.binary
 
 
+import leetcode.array.binary.LC367
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
 
 internal class LC367Test {
 

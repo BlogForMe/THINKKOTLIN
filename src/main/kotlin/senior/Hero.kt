@@ -1,36 +1,35 @@
 package senior
 
-import senior.Jhava
 import java.io.IOException
 import java.lang.Exception
 import kotlin.jvm.Throws
 
-
-fun main() {
-    val adversary = Jhava()
-    println(adversary.utterGreeting())
-
-    // determineFriends String! 平台类型
-//    val level = adversary.determineFriends().toLong()
-//    level?.toLong()
-    println(adversary.hitPoints)
-
-
-    try {
-        adversary.extendHandInFriendship()
-    } catch (e: Exception) {
-        println("exception")
-    }
-
-
-    try {
-        acceptApology()
-    } catch (e: IOException) {
-        println("exception")
-    }
-}
-
-fun makeProclamation() = "Greetings , beast!"
+//
+//fun main() {
+//    val adversary = Jhava()
+//    println(adversary.utterGreeting())
+//
+//    // determineFriends String! 平台类型
+////    val level = adversary.determineFriends().toLong()
+////    level?.toLong()
+//    println(adversary.hitPoints)
+//
+//
+//    try {
+//        adversary.extendHandInFriendship()
+//    } catch (e: Exception) {
+//        println("exception")
+//    }
+//
+//
+//    try {
+//        acceptApology()
+//    } catch (e: IOException) {
+//        println("exception")
+//    }
+//}
+//
+//fun makeProclamation() = "Greetings , beast!"
 
 
 fun acceptApology() {

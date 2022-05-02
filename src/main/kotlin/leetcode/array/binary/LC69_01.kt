@@ -1,4 +1,4 @@
-package leetcode.binary
+package leetcode.array.binary
 
 // 新建02再写一次
 class LC69_01 {

@@ -1,4 +1,4 @@
-package leetcode.binary
+package leetcode.array.binary
 
 class LC34 {
     fun searchRange(nums: IntArray, target: Int): IntArray {
@@ -62,12 +62,12 @@ fun main() {
 //    println(LC34().searchRange(intArrayOf(5, 7, 7, 8, 8, 10), 8).printIntArray())
 //    println(LC34().searchRange(intArrayOf(5, 7, 7, 8, 8, 10), 6).printIntArray())
 //    println(LC34().searchRange(intArrayOf(2,2), 1).printIntArray())
-    for (i in 1..20) {
-        for (i in 0..9) {
-            print(i)
-        }
-    }
-    println()
-    println("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789".length)
+//    for (i in 1..20) {
+//        for (i in 0..9) {
+//            print(i)
+//        }
+//    }
+//    println()
+//    println("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789".length)
 }
 

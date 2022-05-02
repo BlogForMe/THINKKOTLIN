@@ -1,4 +1,4 @@
-package leetcode.binary
+package leetcode.array.binary
 
 class LC35 {
     fun searchInsert(nums: IntArray, target: Int): Int {

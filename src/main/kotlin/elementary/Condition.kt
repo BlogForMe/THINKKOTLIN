@@ -1,4 +1,3 @@
-import sun.management.Agent
 
 fun main() {
     val score = 6;
