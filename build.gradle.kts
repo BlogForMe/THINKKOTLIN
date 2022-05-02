@@ -13,8 +13,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
     testImplementation("junit:junit:4.13")
+    testImplementation("org.hamcrest:hamcrest:2.2")
 
     implementation("com.squareup:kotlinpoet:1.11.0")
     implementation("com.alibaba:easyexcel:3.0.5")
