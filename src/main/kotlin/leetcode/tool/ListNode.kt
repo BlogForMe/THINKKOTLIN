@@ -1,22 +1,18 @@
 package leetcode.tool
 
-class ListNode {
-    var element = 0
+class ListNode() {
+    var `val`: Int = 0
     var next: ListNode? = null
 
-    constructor(next: ListNode?) {
-        this.next = next
-    }
-
-    constructor(x: Int) {
-        element = x
+    constructor(x: Int) : this() {
+        `val` = x
     }
 
     // 链表节点的构造函数
     // 使用arr为参数，创建一个链表，当前的ListNode为链表头节点
-    constructor(arr: IntArray?) {
+    constructor(arr: IntArray?) : this() {
         require(!(arr == null || arr.isEmpty())) { "arr can not be empty" }
-        element = arr[0]
+        `val` = arr[0]
         var cur: ListNode? = this
         for (i in 1 until arr.size) {
             cur!!.next = ListNode(arr[i])
@@ -29,7 +25,7 @@ class ListNode {
         val res = StringBuilder()
         var cur: ListNode? = this
         while (cur != null) {
-            res.append(cur.element.toString() + "->")
+            res.append(cur.`val`.toString() + "->")
             cur = cur.next
         }
         res.append("NULL")
