@@ -8,6 +8,14 @@ fun String.addExt() = " !".repeat(this.count())
 // 泛型的拓展函数
 fun <T> T.easyPrint(): Unit = println(this)
 
+fun Array<IntArray>.printDimensionalArray() {
+    for (i in this.indices) {
+        for (j in this.indices) {
+            print(" ${this[i][j]} ")
+        }
+        println()
+    }
+}
 
 // T.apply 返回的还是T
 // T.() -> Unit 传入拓展函数(泛型), 而不是普通的匿名函数 ???
