@@ -37,5 +37,3 @@ fun main() {
     println("abcdefghig".length)
     println("abcdefghigabcdefghigabcdefghigabcdefghigabcdefghigabcdefghigabcdefghigabcdefghigabcdefghigabcdefghig".length)
 }
-
-class Person(val id: Int, val name: String)

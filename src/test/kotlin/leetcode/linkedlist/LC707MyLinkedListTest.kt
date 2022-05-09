@@ -30,12 +30,12 @@ class LC707MyLinkedListTest {
 
     @Test
     fun addAtTail() {
-
+        linkedList.addAtTail(8)
+        linkedList
     }
 
     @Test
     fun addAtIndex() {
-        linkedList
 
     }
 
