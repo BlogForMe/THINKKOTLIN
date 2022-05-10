@@ -14,16 +14,16 @@ class LC707MyLinkedListTest {
         linkedList.addAtHead(1)
         linkedList.addAtHead(2)
         linkedList.addAtHead(3)
+        linkedList.addAtHead(4)
     }
 
     @Test
     fun get() {
-
+        val get = linkedList.get(1)
     }
 
     @Test
     fun addAtHead() {
-
         assertEquals(2,linkedList.get(1))
         assertEquals(1,linkedList.get(2))
     }
@@ -31,15 +31,18 @@ class LC707MyLinkedListTest {
     @Test
     fun addAtTail() {
         linkedList.addAtTail(8)
-        linkedList
     }
 
     @Test
     fun addAtIndex() {
-
+        linkedList.addAtIndex(1,99)
+        linkedList.addAtIndex(-5,-5)
+        println(linkedList)
     }
 
     @Test
     fun deleteAtIndex() {
+        linkedList.deleteAtIndex(1)
+        println(linkedList)
     }
 }

@@ -4,15 +4,17 @@ import leetcode.tool.ListNode
 
 
 class MyLinkedList() {
-    val dummyHead = ListNode()
+    private val dummyHead = ListNode()
+    var size = 0 //length
 
     fun get(index: Int): Int {
+        if (index < -1 || index >= size) return -1
         var pIndex = index
         var p = dummyHead.next
         while (pIndex-- > 0) {
             p = p?.next
         }
-        return p?.`val` ?: 0
+        return p?.`val` ?: -1
     }
 
     fun addAtHead(`val`: Int) {
@@ -21,6 +23,7 @@ class MyLinkedList() {
         dummyHead.next = newNode  // 虚拟头节点 指向新的头节点
         if (headNode != null) {
             newNode.next = headNode // 新的头节点指向 之前的头节点
+            size++
         }
     }
 
@@ -30,6 +33,7 @@ class MyLinkedList() {
         while (p != null) {
             if (p.next == null) {
                 p.next = newNode
+                size++
                 break // 必须停止，否则一直在尾部添加 新的节点
             }
             p = p.next
@@ -37,19 +41,35 @@ class MyLinkedList() {
     }
 
     fun addAtIndex(index: Int, `val`: Int) {
+        if (index < 0) {
+            addAtHead(`val`)
+            size++
+            return
+        }
+        if (index >= size) return
         val newNode = ListNode(`val`) // 新的节点
         var pIndex = index
-        var p = dummyHead.next
+        var curr = dummyHead.next
         while (pIndex-- > 0) {
-            p = p?.next
+            curr = curr?.next
         }
-        if (p != null) {
-            p.next = newNode
+        val temp = curr?.next
+        if (curr != null) {
+            curr.next = newNode
+            newNode.next = temp
+            size++
         }
     }
 
     fun deleteAtIndex(index: Int) {
-
+        var pIndex = index
+        var curr: ListNode? = dummyHead
+        while (pIndex-- > 0) {
+            curr = curr?.next
+        }
+        if (curr?.next != null) {
+            curr.next = curr.next?.next
+            size--
+        }
     }
-
 }
