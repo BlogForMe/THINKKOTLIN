@@ -1,4 +1,4 @@
-package leetcode.linkedlist
+package leetcode.hash
 
 class LC242 {
     fun isAnagram(s: String, t: String): Boolean {

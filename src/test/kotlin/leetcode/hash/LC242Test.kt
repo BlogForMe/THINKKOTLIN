@@ -1,4 +1,4 @@
-package leetcode.linkedlist
+package leetcode.hash
 
 import org.junit.Test
 
