@@ -19,6 +19,5 @@ class LC383Test {
         var i = 0
         i = ++i
         println(i)
-
     }
 }
