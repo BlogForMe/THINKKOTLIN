@@ -4,8 +4,8 @@ import java.io.File
  * 修改截图文件名称
  */
 //const val FILE_NAME = "/Users/m/Documents/BLOG/source/_posts/CaptureApp/"
-//const val FILE_NAME = "/Users/m/Desktop/"
-const val FILE_NAME = "/Users/m/Documents/BLOG/source/_posts/JVM/"
+const val FILE_NAME = "/Users/m/Desktop/"
+//const val FILE_NAME = "/Users/m/Documents/BLOG/source/_posts/JVM/"
 
 fun main() {
     val file = File(FILE_NAME)
@@ -24,9 +24,9 @@ fun main() {
 
         var flag = File(FILE_NAME + it).renameTo(newName)
         println(flag)
-        val blacklist = ""
-        val host = ""
     }
+
+
 
 
 }
