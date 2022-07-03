@@ -1,5 +1,7 @@
 package leetcode.string
 
+import java.util.Stack
+
 class LC28 {
     fun strStr(haystack: String, needle: String): Int {
         var needleIndex = 0
