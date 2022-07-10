@@ -16,8 +16,16 @@ class MagicBox5<T : Human>(vararg item: T) {
 }
 
 open class Human(val age: Int)
-class Boy(val name: String, age: Int) : Human(age)
-class Man(val name: String, age: Int) : Human(age)
+class Boy(val name: String, age: Int) : Human(age){
+    override fun toString(): String {
+        return "Boy(name='$name')"
+    }
+}
+class Man(val name: String, age: Int) : Human(age){
+    override fun toString(): String {
+        return "Man(name='$name')"
+    }
+}
 class Dog(val weight: Int)
 
 fun refreshFont(vararg arr:Int){
