@@ -1,6 +1,7 @@
 package leetcode.array
 
-import senior.printDimensionalArray
+import printDimensionalArray
+
 
 class LC59 {
     fun generateMatrix(n: Int): Array<IntArray> {

@@ -7,7 +7,7 @@ fun main() {
 //    val nullableString:String? = null
     val nullableString:String? = "hehe"
     nullableString.printWithDefault("abc") // nullableString?就不会设置默认值
-    nullableString printWithDefault "abc"
+    nullableString printWithDefault "abc"   // 加了infix可以简化成这样
     "girl".to(18)
     mapOf("girl" to 18)
 }
