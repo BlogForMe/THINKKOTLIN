@@ -1,4 +1,4 @@
-
+package test
 fun main(){
     val mutableList = mutableListOf<Person>()
     for (i in 1..10){

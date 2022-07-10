@@ -1,4 +1,4 @@
-package elementary;
+package dongnao.anonyfunc;
 
 public class KeyWordJava {
     public static void is(){

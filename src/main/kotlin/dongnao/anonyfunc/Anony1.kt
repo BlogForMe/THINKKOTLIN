@@ -1,4 +1,4 @@
-package anonyfunc
+package dongnao.anonyfunc
 
 class Anony1 {
     companion object {
