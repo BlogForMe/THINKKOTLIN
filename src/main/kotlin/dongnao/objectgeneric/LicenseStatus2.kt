@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 //密封类
 sealed class LicenseStatus2 {

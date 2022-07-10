@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 open class Player {
     open fun load() = "loading nothing.."

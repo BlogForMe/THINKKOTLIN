@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 object ApplicationConfig {
     init {

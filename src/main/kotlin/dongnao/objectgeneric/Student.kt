@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 data  class Student(
         var name: String,

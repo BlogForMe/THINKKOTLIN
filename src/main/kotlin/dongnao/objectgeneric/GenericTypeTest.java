@@ -1,6 +1,4 @@
-package object;
-
-import java.util.ArrayList;
+package dongnao.objectgeneric;
 
 public class GenericTypeTest {
     public static void main(String[] args) {

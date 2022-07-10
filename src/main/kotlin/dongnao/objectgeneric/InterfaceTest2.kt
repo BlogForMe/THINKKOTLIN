@@ -1,18 +1,20 @@
-package `object`
+package dongnao.objectgeneric
 
-/*
 interface Movable{
-    var maxSpeed:Int
+    val maxSpeed:Int
+        get() = (1..500).shuffled().last()
+
     var wheels:Int
     fun move(movable:Movable):String
 }
 
 class Car(_name:String,override  var wheels:Int=4):Movable{
+
     override var maxSpeed: Int
-        get() = TODO("Not yet implemented")
+        get() = super.maxSpeed
         set(value) {}
 
     override fun move(movable: Movable): String {
         TODO("Not yet implemented")
     }
-}*/
+}

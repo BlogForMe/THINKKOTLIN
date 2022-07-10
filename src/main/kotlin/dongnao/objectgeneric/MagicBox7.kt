@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 /*
 class MagicBox<T : Human>() {
     //随机产生一个对象，如果不是指定类型的对象，就通过backup函数生成一个指定类型的对象

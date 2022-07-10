@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 // out
 interface Production<out T> {

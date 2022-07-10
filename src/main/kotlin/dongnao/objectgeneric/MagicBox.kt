@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 /*
 class MagicBox<T>(item:T){

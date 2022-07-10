@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 enum class Direction2(private val coordinate: Coordinate) {
     EAST(Coordinate(1, 0)), //EAST()是Direction2的实例

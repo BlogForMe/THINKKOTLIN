@@ -1,4 +1,4 @@
-package `object`
+package dongnao.objectgeneric
 
 abstract class Gun(val range: Int) {
     abstract fun pullTrigger(): String
@@ -7,7 +7,7 @@ abstract class Gun(val range: Int) {
     }
 }
 
-class AK47(val price: Int) : Gun(range = 500){
+class AK47(val price: Int) : dongnao.objectgeneric.Gun(range = 500){
     override fun pullTrigger(): String {
         TODO()
     }

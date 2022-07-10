@@ -1,6 +1,7 @@
-package `object`
+package dongnao.objectgeneric
 
-/*class MagicBox4<T:Human>(item: T) {      //这里添加约束
+/*
+class MagicBox<T>(item: T) {
     var available = false
     protected var subject: T = item
     fun fetch(): T? {
@@ -15,14 +16,13 @@ package `object`
     }
 }
 
-open class Human(val age: Int)
-class Boy(val name: String, age: Int) : Human(age)
-class Man(val name: String,  age: Int):Human(age)
+class Boy(val name: String, val age: Int)
+class Man(val name: String, val age: Int)
 class Dog(val weight: Int)
 
 fun main() {
-    val box1 = MagicBox4(Boy("John", 20))
-//    val box2 = MagicBox4(Dog(20)) ////因为约束类型，导致这里会报错
+    val box1 = MagicBox(Boy("John", 20))
+    val box2 = MagicBox(Dog(20))
     box1.available = true
     box1.fetch()?.run {
         println("you find $name")
@@ -31,4 +31,5 @@ fun main() {
     val fetch = box1.fetch {
         Man(it.name, it.age.plus(15))
     }
-}*/
+}
+*/
