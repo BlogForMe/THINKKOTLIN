@@ -1,7 +1,19 @@
 package test
 
-class test2 {
+val name = "jon"
+const val age = "joo"
+
+object ConstantObject {
+    val name = "jon"
+    const val age = "joo"
 }
+class ConstantClass {
+    companion object {
+        val name = "jon"
+        const val age = "joo"
+    }
+}
+
 
 fun main() {
 //    val d:String? ="null"
