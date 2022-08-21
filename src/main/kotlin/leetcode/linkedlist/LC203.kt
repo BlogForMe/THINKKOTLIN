@@ -1,6 +1,6 @@
 package leetcode.linkedlist
 
-import leetcode.tool.ListNode
+import leetcode.ext.ListNode
 
 class LC203 {
     fun removeElements(head: ListNode?, target: Int): ListNode? {

@@ -1,6 +1,6 @@
 package leetcode.linkedlist
 
-import leetcode.tool.ListNode
+import leetcode.ext.ListNode
 
 class LC142_02 {
     fun detectCycle(head: ListNode?): ListNode? {

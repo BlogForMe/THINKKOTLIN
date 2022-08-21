@@ -1,6 +1,6 @@
 package leetcode.linkedlist
 
-import leetcode.tool.ListNode
+import leetcode.ext.ListNode
 
 class LC160 {
     fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {

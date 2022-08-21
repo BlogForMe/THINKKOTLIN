@@ -1,6 +1,6 @@
 package leetcode.linkedlist
 
-import leetcode.tool.ListNode
+import leetcode.ext.ListNode
 
 class LC24 {
     fun swapPairs(head: ListNode?): ListNode? {

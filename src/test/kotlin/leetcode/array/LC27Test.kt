@@ -1,6 +1,6 @@
 package leetcode.array
 
-import leetcode.tool.printIntArray
+import leetcode.ext.printIntArray
 import org.junit.Test
 
 

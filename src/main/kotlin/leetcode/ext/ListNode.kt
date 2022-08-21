@@ -1,4 +1,4 @@
-package leetcode.tool
+package leetcode.ext
 
 class ListNode() {
     var `val`: Int = 0

@@ -1,6 +1,6 @@
 package leetcode.linkedlist
 
-import leetcode.tool.ListNode
+import leetcode.ext.ListNode
 
 class LC19 {
     fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {

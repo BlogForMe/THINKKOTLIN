@@ -1,6 +1,6 @@
 package leetcode.linkedlist;
 
-import leetcode.tool.ListNode;
+import leetcode.ext.ListNode;
 
 public class Solution160 {
     public static void main(String[] args) {

@@ -122,7 +122,7 @@ class Multilingual {
 
 
     @Test
-    fun MyProject() {
+    fun MyRfidProject() {
 
         /**
          * read excel

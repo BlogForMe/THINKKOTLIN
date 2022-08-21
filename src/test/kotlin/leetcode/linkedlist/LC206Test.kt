@@ -1,9 +1,7 @@
 package leetcode.linkedlist
 
-import leetcode.tool.ListNode
+import leetcode.ext.ListNode
 import org.junit.Test
-
-import org.junit.Assert.*
 
 class LC206Test {
 

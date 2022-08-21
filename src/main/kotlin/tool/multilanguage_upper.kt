@@ -1,6 +1,6 @@
 package tool
 
-
+// 多语言的在单测里面
 fun main() {
 
 //    arrayOf(
