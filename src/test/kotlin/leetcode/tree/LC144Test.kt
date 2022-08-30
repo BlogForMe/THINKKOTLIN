@@ -23,6 +23,7 @@ class LC144Test {
         Assert.assertArrayEquals(intArrayOf(1, 2, 3), LC144().preorderTraversal1(constructTree).toIntArray())
 
 
+
     }
 
 }
