@@ -77,4 +77,6 @@ class SPM_RFID {
         val last = "TNGAPP.RFID.NonRfidUser".split(".").last()
         println(last)
     }
+
 }
+
