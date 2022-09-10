@@ -1,15 +1,25 @@
 package leetcode.tree
 
 import leetcode.ext.TreeNode
+import leetcode.ext.TreeOperation
 
 class LC226 {
-    //使用先序遍历
+
+    var mRoot: TreeNode? = null
     fun invertTree(root: TreeNode?): TreeNode? {
-        if (root == null) return null
-        swapNode(root)
-        invertTree(root.left)
-        invertTree(root.right)
-        return root
+        mRoot = root
+        return traval(root)
+    }
+
+    //使用先序遍历
+    fun traval(node: TreeNode?): TreeNode? {
+        if (node == null) return null
+        println(" \n \n node ${node.`val`}")
+        TreeOperation.show(mRoot)
+        traval(node.left)
+        swapNode(node)
+        traval(node.right)
+        return node
     }
 
 
