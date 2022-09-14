@@ -4,7 +4,7 @@ import leetcode.ext.TreeNode
 import java.util.LinkedList
 
 class LC104 {
-    fun maxDepth(root: TreeNode?): Int {
+    fun maxDepth1(root: TreeNode?): Int {
         val queue = LinkedList<TreeNode>()
         var depth = 0
         if (root != null) {
@@ -22,5 +22,17 @@ class LC104 {
             }
         }
         return depth
+    }
+
+    fun maxDepth(root: TreeNode?): Int {
+        val depth = 0
+        if (root == null) return depth
+        return dfsDepth(root, depth)
+    }
+
+    private fun dfsDepth(node: TreeNode?, depth: Int): Int {
+        if (node == null) return depth
+        val maxDepth = Math.max(dfsDepth(node.left, depth + 1), dfsDepth(node.right, depth + 1)) // 用max函数更直观
+        return maxDepth
     }
 }

@@ -2,6 +2,7 @@ package leetcode.tree
 
 import leetcode.ext.TreeNode
 import leetcode.ext.TreeOperation
+import java.util.LinkedList
 
 class LC226 {
 
@@ -28,4 +29,23 @@ class LC226 {
         node?.left = node?.right
         node?.right = temp
     }
+
+
+    fun invertTree1(root: TreeNode?): TreeNode? {
+        val queue = LinkedList<TreeNode>()
+        if (root != null) {
+            queue.offer(root)
+        }
+        while (queue.isNotEmpty()){
+            val layerSize = queue.size
+            for (i in 0 until layerSize){
+                val pollNode = queue.poll()
+                swapNode(pollNode)
+                pollNode.left?.let { queue.offer(it) }
+                pollNode.right?.let { queue.offer(it) }
+            }
+        }
+        return root
+    }
+
 }
