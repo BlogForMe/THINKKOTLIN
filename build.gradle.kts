@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation("junit:junit:4.13")
+    testImplementation("junit:junit:4.13.2")
     testImplementation("org.hamcrest:hamcrest:2.2")
 
     implementation("com.squareup:kotlinpoet:1.11.0")
