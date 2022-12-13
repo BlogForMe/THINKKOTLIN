@@ -20,6 +20,9 @@ dependencies {
     implementation("com.squareup:kotlinpoet:1.11.0")
     implementation("com.alibaba:easyexcel:3.0.5")
     implementation("com.github.matrixseven:ExcelReads:1.0.4")
+    implementation(kotlin("reflect"))
+//    implementation("org.jetbrains.kotlinx:kotlinx-reflect:1.6.3")
+
 
 }
 tasks.test {
