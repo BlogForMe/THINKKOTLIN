@@ -3,9 +3,7 @@ package coroutine
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.produce
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.merge
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.selects.select
 import kotlin.system.measureTimeMillis
 
@@ -37,7 +35,9 @@ fun testFlow() = runBlocking {
             .map { deferred ->
                 flow { emit(deferred.await()) }
             }.merge().collect { user -> println(user) }
-    }
+    } //这个没问题，可以用,   4秒
+
+
 }
 
 suspend fun flowTest() {
@@ -203,12 +203,12 @@ fun testFlowMerge() = runBlocking {
 
 fun CoroutineScope.getUserFromLocal() = async(Dispatchers.IO) {
     // 模拟读取本地数据
-    delay(6000)
+    delay(3000)
     "getUserFromLocal"
 }
 
 fun CoroutineScope.getUserFromNetwork() = async(Dispatchers.IO) {
     // 模拟读取网络数据
-    delay(5000)
+    delay(6000)
     "getUserFromNetwork"
 }
