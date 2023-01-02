@@ -48,7 +48,7 @@ public class LC51 {
                 return false;
             }
         }
-        for (int x = pRow - 1, y = pColumn + 1; x >= 0 && y < n - 1; x--, y++) {//右上角  首次==,n-1边界错了
+        for (int x = pRow - 1, y = pColumn + 1; x >= 0 && y <= n - 1; x--, y++) {//右上角  首次==,n-1边界错了 ,y < n - 1一开始写成这样，找了半天
             if (chessBoard[x][y] == 'Q') {
                 return false;
             }

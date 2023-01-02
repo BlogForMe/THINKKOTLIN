@@ -5,7 +5,7 @@ import org.junit.Test
 class LC51Test {
     @Test
     fun solveNQueensTest() {
-        println(LC51().solveNQueens(4))
+        println(LC51().solveNQueens(8))
     }
 
     /**
