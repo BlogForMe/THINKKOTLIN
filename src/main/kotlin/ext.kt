@@ -7,6 +7,13 @@ fun Array<IntArray>.printDimensionalArray() {
     }
 }
 
+fun <T> Array<T>.printArray() {
+    for (i in this) {
+        print(" $i ")
+    }
+    println()
+}
+
 fun main() {
     val listOf = listOf("1", "2", "3", "4", "5", "6")
     println(listOf.subList(0, 5))

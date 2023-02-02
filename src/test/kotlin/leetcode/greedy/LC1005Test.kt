@@ -2,6 +2,7 @@ package leetcode.greedy
 
 import org.junit.Assert
 import org.junit.Test
+import printArray
 import senior.easyPrint
 import java.util.*
 
@@ -20,6 +21,6 @@ class LC1005Test {
     fun absSortTest() {
         val array = arrayOf(2, -3, -1, 5, -4)
         Arrays.sort(array, Comparator.comparingInt(Math::abs))
-        array.easyPrint()
+        array.printArray()
     }
 }
