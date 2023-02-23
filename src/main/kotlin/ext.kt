@@ -1,6 +1,6 @@
 fun Array<IntArray>.printDimensionalArray() {
     for (i in this.indices) {
-        for (j in this.indices) {
+        for (j in this[i].indices) {
             print(" ${this[i][j]} ")
         }
         println()
