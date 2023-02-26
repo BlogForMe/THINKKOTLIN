@@ -1,8 +1,7 @@
 package leetcode.tree
 
-import leetcode.ext.TreeNode
 import java.util.LinkedList
-import kotlin.math.min
+import leetcode.ext.TreeNode
 
 class LC111 {
     fun minDepth1(root: TreeNode?): Int {

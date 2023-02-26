@@ -1,7 +1,7 @@
 package leetcode.tree
 
-import leetcode.ext.TreeNode
 import java.util.*
+import leetcode.ext.TreeNode
 
 
 class LC257 {

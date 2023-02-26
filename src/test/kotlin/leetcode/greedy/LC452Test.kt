@@ -1,6 +1,6 @@
 package leetcode.greedy
 
-import TestLinkeList
+import leetcode.TestLinkeList
 import org.junit.Assert
 import org.junit.Test
 

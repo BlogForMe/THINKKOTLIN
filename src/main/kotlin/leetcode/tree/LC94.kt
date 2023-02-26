@@ -1,9 +1,9 @@
 package leetcode.tree
 
-import leetcode.ext.TreeNode
 import java.io.Serializable
 import java.util.LinkedList
 import java.util.Stack
+import leetcode.ext.TreeNode
 
 class LC94 {
     fun inorderTraversal(root: TreeNode?): List<Int> {

@@ -1,5 +1,4 @@
 package leetcode.tree.seach
-
 import leetcode.ext.TreeNode
 
 class LC530 {

@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -6,6 +8,7 @@ public class TestLinkeList {
         LinkedList<Integer> linkedList = new LinkedList<>();
 //        linkedList.add(0,0);
 //        linkedList.add(2,2);
+        System.out.println("test");
     }
 
     public static int[][] reconstructQueue(int[][] people) {

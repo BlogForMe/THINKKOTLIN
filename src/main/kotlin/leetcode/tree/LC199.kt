@@ -1,7 +1,7 @@
 package leetcode.tree
 
-import leetcode.ext.TreeNode
 import java.util.LinkedList
+import leetcode.ext.TreeNode
 
 class LC199 {
     fun rightSideView(root: TreeNode?): List<Int> {

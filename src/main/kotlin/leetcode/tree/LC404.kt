@@ -1,5 +1,4 @@
 package leetcode.tree
-
 import leetcode.ext.TreeNode
 
 class LC404 {

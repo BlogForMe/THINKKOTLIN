@@ -1,7 +1,7 @@
 package leetcode.tree
 
-import leetcode.ext.TreeNode
 import java.util.Stack
+import leetcode.ext.TreeNode
 
 class LC112 {
     fun hasPathSum(root: TreeNode?, targetSum: Int): Boolean {

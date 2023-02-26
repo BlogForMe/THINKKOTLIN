@@ -1,8 +1,8 @@
 package leetcode.tree
 
+import java.util.LinkedList
 import leetcode.ext.TreeNode
 import leetcode.ext.TreeOperation
-import java.util.LinkedList
 
 class LC226 {
 

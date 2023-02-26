@@ -1,6 +1,5 @@
 package leetcode.greedy
 
-import TestLinkeList
 import org.junit.Test
 import printDimensionalArray
 import java.util.*

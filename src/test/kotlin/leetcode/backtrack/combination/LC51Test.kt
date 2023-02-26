@@ -1,5 +1,6 @@
 package leetcode.backtrack.combination
 
+import leetcode.LC51
 import org.junit.Test
 
 class LC51Test {

@@ -1,8 +1,8 @@
 package leetcode.tree
 
-import leetcode.ext.TreeNode
 import java.util.LinkedList
 import java.util.Stack
+import leetcode.ext.TreeNode
 
 class LC113 {
     val resultList = LinkedList<List<Int>>()
