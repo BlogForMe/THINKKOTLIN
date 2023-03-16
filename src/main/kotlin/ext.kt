@@ -13,6 +13,12 @@ fun <T> Array<T>.printArray() {
     }
     println()
 }
+fun <T> List<T>.printArray() {
+    for (i in this) {
+        print(" $i ")
+    }
+    println()
+}
 
 fun main() {
     val listOf = listOf("1", "2", "3", "4", "5", "6")
