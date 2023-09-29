@@ -40,12 +40,23 @@ class Knapstack01 {
         var j = w
         for (i in n downTo 0) {
             if (dp[i - 1][j] >= dp[i][j]) {
-                j-=weightArr[j]
+                j -= weightArr[j]
             }
         }
         return dp[n][w]
     }
 
+    fun knapStackarray(N: Int, W: Int) {
+        val weightArr = arrayOf(1, 3, 4)
+        val valueArr = arrayOf(15, 20, 30)
+
+        val dp = Array(4) { 0 }
+        for (i in 1..N) {
+            for (j in W downTo weightArr[i]) { // 只有j容量大于当前物品的容量，才会考虑添加到数组中，更新当前cell的值，否则就直接用上一层的值
+                dp[j] = Math.max(dp[j],dp[j-weightArr[i]+valueArr[i]])
+            }
+        }
+    }
 
 }
 
