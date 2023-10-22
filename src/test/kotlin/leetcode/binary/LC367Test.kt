@@ -1,7 +1,7 @@
 package leetcode.binary
 
 
-import leetcode.array.binary.LC367
+import leetcode.array.LC367
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

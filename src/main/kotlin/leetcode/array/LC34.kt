@@ -1,4 +1,4 @@
-package leetcode.array.binary
+package leetcode.array
 
 class LC34 {
     fun searchRange(nums: IntArray, target: Int): IntArray {
