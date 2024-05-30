@@ -1,8 +1,7 @@
 package generics.sgg;
 
-import generics.extendsuper.Apple;
-import generics.extendsuper.Food;
-import generics.extendsuper.Fruit;
+import generics.extendsuper.Apple1;
+import generics.extendsuper.Fruit1;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -81,15 +80,15 @@ public class GenericTest1 {
         // ? extends Fruit 可以理解为 <= Fruit
 
         // List<? extends Fruit>                        //  可以作为 List<Apple> ， List<Fruit>的父类。
-        List<? extends Fruit> list4 =  new ArrayList<Apple>();
-        List<? extends Fruit> list5=  new ArrayList<Fruit>();
+        List<? extends Fruit1> list4 =  new ArrayList<Apple1>();
+        List<? extends Fruit1> list5=  new ArrayList<Fruit1>();
 //        List<? extends Fruit> list5 =new ArrayList<Object>();    //编译报错，Object类不在 <= Fruit范围内
 
         /**
          * 只能读取数据 , 不能修改数据
          */
 
-        Fruit fruit = list4.get(0);
+        Fruit1 fruit = list4.get(0);
 //        Apple apple =list2.get(0); //编译不通过， <= Fruit范围，list1.get(0)实际类型可能是Fruit，是Apple的父类。
 //        list1.add(new Apple()); //编译报错，<= Fruit范围， List<? extends Fruit>实际类型可能比是GreenApple,比Apple范围还小，随意存不了数据
 
@@ -98,16 +97,16 @@ public class GenericTest1 {
         //只能修改数据，不能读取数据
         // <? super Fruit>
 
-        List<? super Fruit> list6 = new ArrayList<Fruit>();  //   ? super Fruit 可以理解为 >= Fruit
-        List<? super Fruit>  list7 = new ArrayList<Object>();
+        List<? super Fruit1> list6 = new ArrayList<Fruit1>();  //   ? super Fruit 可以理解为 >= Fruit
+        List<? super Fruit1>  list7 = new ArrayList<Object>();
 
 
         Object object = list6.get(0); //理论上不能读取，但是都到Object还是可以的
 
 //        Food food = list2.get(0); //编译不通过，>=Fruit范围，list2.get(0)实际类型可能是Object,不能赋值给小于它子类，所以只能是Object
 
-        list6.add(new Fruit());
-        list6.add(new Apple()); //
+        list6.add(new Fruit1());
+        list6.add(new Apple1()); //
 //        list6.add(new Food()); //   ? super Fruit范围是是 [Fruit,+∞), 所以Fruit范围内的都可以添加
     }
 

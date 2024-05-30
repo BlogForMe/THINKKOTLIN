@@ -1,6 +1,6 @@
 package generics.extendsuper;
 
-public class Apple extends Fruit {
+public class Apple1 extends Fruit1 {
     @Override
     void whatName() {
 //        super.whatName();

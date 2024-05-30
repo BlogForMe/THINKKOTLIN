@@ -1,6 +1,6 @@
 package generics.work;
 
-import generics.extendsuper.Fruit;
+import generics.extendsuper.Fruit1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,14 +13,14 @@ public class MpObjectBannerJava {
     }
 
     public void refresh(MPBannerHelperCallBackJava callBack) {
-        ArrayList<Fruit> arrayList = new ArrayList<>();
+        ArrayList<Fruit1> arrayList = new ArrayList<>();
         callBack.refreshMPBannerViewJava(arrayList);
     }
 
     interface MPBannerHelperCallBackJava {
         void funFirst();
 
-        void refreshMPBannerViewJava(List<Fruit> launchableItem);
+        void refreshMPBannerViewJava(List<Fruit1> launchableItem);
     }
 }
 

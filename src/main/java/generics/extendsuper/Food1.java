@@ -1,4 +1,5 @@
 package generics.extendsuper;
 
-public class Food {
+public class Food1 {
 }
+

@@ -2,7 +2,7 @@ package generics.work;
 
 import com.tngd.uikitsdk.view.bar.generics.work.MPBannerHelperCallBack;
 import com.tngd.uikitsdk.view.bar.generics.work.MpObjectBanner;
-import generics.extendsuper.Fruit;
+import generics.extendsuper.Fruit1;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -12,7 +12,7 @@ public class TestGenerics {
         MpObjectBanner.INSTANCE.refrash(new MPBannerHelperCallBack() {
 
             @Override
-            public void refreshMPBannerView(@NotNull List<? extends Fruit> launchableItem) {
+            public void refreshMPBannerView(@NotNull List<? extends Fruit1> launchableItem) {
             }
 
             @Override
@@ -29,7 +29,7 @@ public class TestGenerics {
             }
 
             @Override
-            public void refreshMPBannerViewJava(List<Fruit> launchableItem) {
+            public void refreshMPBannerViewJava(List<Fruit1> launchableItem) {
 
             }
         });

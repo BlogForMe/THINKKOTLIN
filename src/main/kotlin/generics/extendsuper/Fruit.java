@@ -1,6 +1,6 @@
 package generics.extendsuper;
 
-public class Fruit extends Food {
+public class Fruit extends Food1 {
     public Fruit() {
 
     }

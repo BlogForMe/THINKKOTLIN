@@ -27,7 +27,7 @@ class B {
 
 public class TypeRemove {
     public static void main(String[] args) {
-        GenericType<A> genericType = new GenericType<>(A.class);
+        GenericType1<A> genericType = new GenericType1<>(A.class);
         System.out.println("---------");
         System.out.println(genericType.isInstance(new A()));
         System.out.println(genericType.isInstance(new B()));

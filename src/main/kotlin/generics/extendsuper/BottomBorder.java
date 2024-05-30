@@ -9,21 +9,21 @@ public class BottomBorder {
 }
 
 
-class Meat extends Food {
+class Meat extends Food1 {
 }
 
 
-class Banana extends Fruit {
+class Banana extends Fruit1 {
 }
 
-class Pork extends Meat {
+class Pork extends Meat1 {
 }
 
-class Beef extends Meat {
+class Beef extends Meat1 {
 }
 
-class RedApple extends Apple {
+class RedApple extends Apple1 {
 }
 
-class GreenApple extends Apple {
+class GreenApple extends Apple1 {
 }

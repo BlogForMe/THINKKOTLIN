@@ -1,10 +1,10 @@
 package generics.extendsuper;
 
-public class UpBorder {
+public class UpBorder1 {
     public static void main(String[] args) {
 //        Plate<Fruit> p = new Plate<Apple>(new Apple());
 //        Plate<? extends  Fruit> p = new Plate<Apple>(new Apple());
-        Plate<? extends  Fruit> p = new Plate<>();
+        Plate1<? extends Fruit1> p = new Plate1<>();
 //        p.set(new Fruit());
 //        p.set(new Apple());
 //        System.out.println(p.get());
@@ -13,13 +13,13 @@ public class UpBorder {
 }
 
 
-class Plate<T> {
-    public Plate() {
+class Plate1<T> {
+    public Plate1() {
     }
 
     T item;
 
-    public Plate(T item) {
+    public Plate1(T item) {
         this.item = item;
     }
 

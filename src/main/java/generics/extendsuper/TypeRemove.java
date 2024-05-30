@@ -6,10 +6,10 @@ package generics.extendsuper;
  */
 
 
-class GenericType<T> {
+class GenericType1<T> {
     Class<?> classType;
 
-    public GenericType(Class<?> classType) {
+    public GenericType1(Class<?> classType) {
         this.classType = classType;
     }
 
@@ -18,21 +18,21 @@ class GenericType<T> {
     }
 }
 
-class A {
-}
-
-class B {
-}
-
-
-public class TypeRemove {
-    public static void main(String[] args) {
-        GenericType<A> genericType = new GenericType<>(A.class);
-        System.out.println("---------");
-        System.out.println(genericType.isInstance(new A()));
-        System.out.println(genericType.isInstance(new B()));
-    }
-}
+//class A {
+//}
+//
+//class B {
+//}
+//
+//
+//public class TypeRemove {
+//    public static void main(String[] args) {
+//        GenericType<A> genericType = new GenericType<>(A.class);
+//        System.out.println("---------");
+//        System.out.println(genericType.isInstance(new A()));
+//        System.out.println(genericType.isInstance(new B()));
+//    }
+//}
 
 
 
