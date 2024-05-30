@@ -15,26 +15,23 @@ test {
     useJUnitPlatform()
 }
 dependencies {
-    testImplementation 'junit:junit:4.13.1'
+    implementation 'junit:junit:4.13.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
-//    testImplementation 'org.jetbrains.kotlin:kotlin-test'
     testImplementation("org.hamcrest:hamcrest:2.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
     implementation("com.squareup:kotlinpoet:1.11.0")
     implementation("com.alibaba:easyexcel:3.0.5")
     implementation("com.github.matrixseven:ExcelReads:1.0.4")
+    implementation("com.io7m.xom:xom:1.2.10")
 
 
 }
 
-test {
-    useJUnitPlatform()
-}
 
 kotlin {
     jvmToolchain(8)
