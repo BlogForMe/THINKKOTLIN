@@ -2,6 +2,8 @@ package pattern.proxy.xiangxue;
 
 //import sun.misc.ProxyGenerator;
 
+import sun.misc.ProxyGenerator;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,8 +22,6 @@ public class Test {
         ZyxInterface zyxProxy = say1.create(ZyxInterface.class);
         zyxProxy.sayHello();
 
-
-
         System.out.println("---------------------\n");
 
         BinBin binBye = new BinBin();
@@ -30,16 +30,18 @@ public class Test {
         bbProxy.sayBye();
 
 
-//        byte[] classFile = ProxyGenerator.generateProxyClass("BinInterface$0", new Class[]{ZyxInterface.class});
-//        try {
-//            FileOutputStream out = new FileOutputStream( "BinInterface$0.class");
-//            out.write(classFile);
-//            out.flush();
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        byte[] classFile = ProxyGenerator.generateProxyClass("BinInterface$0", new Class[]{ZyxInterface.class});
+        try {
+            FileOutputStream out = new FileOutputStream( "BinInterface$0.class");
+            out.write(classFile);
+            out.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
 
 
     }
