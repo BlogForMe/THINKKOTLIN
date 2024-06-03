@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Test {
+public class DynamicProxyTest {
     public static void main(String[] args) {
 
         ZhangYuXin zyxHello = new ZhangYuXin();

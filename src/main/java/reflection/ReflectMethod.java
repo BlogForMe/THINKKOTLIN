@@ -130,8 +130,7 @@ public class ReflectMethod {
      * @throws ClassNotFoundException
      */
     public static void Demo6() throws ClassNotFoundException {
-        Class<?> class1 = null;
-        class1 = Class.forName("reflection.SuperMan");
+        Class<?> class1 = Class.forName("reflection.SuperMan");
 
         //取得父类名称
         Class<?> superClass = class1.getSuperclass();
@@ -166,6 +165,7 @@ public class ReflectMethod {
         }
 
     }
+
 
     /**
      * Demo7: 通过Java反射机制调用类方法
