@@ -36,9 +36,11 @@ public class SimpleDynamicProxy {
 
     public static void main(String[] args) {
         RealObject real = new RealObject();
-        consumer(real);    //没有通过动态代理的调用
 
-        //Insert a proxy and cal again:
+        //没有通过动态代理的调用
+        consumer(real);
+
+        //Insert a proxy and cal again: 动态代理的调用
         Interface proxy = (Interface) Proxy.newProxyInstance(Interface.class.getClassLoader(),
                 new Class[]{Interface.class},new DynamicProxyHandler(real));
         consumer(proxy);
