@@ -120,10 +120,7 @@ public class ReflectMethod {
         Field personNameField = class1.getDeclaredField("name");
         personNameField.setAccessible(true);
         personNameField.set(obj, "胖虎先森");
-
-
         System.out.println("Demo5: 修改属性之后得到属性变量的值：" + personNameField.get(obj));
-
     }
 
 
