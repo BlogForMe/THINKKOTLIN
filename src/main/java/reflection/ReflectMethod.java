@@ -9,36 +9,36 @@ public class ReflectMethod {
      */
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, SecurityException, NoSuchFieldException, NoSuchMethodException {
         //Demo1.  通过Java反射机制得到类的包名和类名
-        Demo1();
-        System.out.println("===============================================");
-
-        //Demo2.  验证所有的类都是Class类的实例对象
-        Demo2();
-        System.out.println("===============================================");
-
-        //Demo3.  通过Java反射机制，用Class 创建类对象[这也就是反射存在的意义所在]，无参构造
-        Demo3();
-        System.out.println("===============================================");
-
-        //Demo4:  通过Java反射机制得到一个类的构造函数，并实现构造带参实例对象
-        Demo4();
-        System.out.println("===============================================");
-
-        //Demo5:  通过Java反射机制操作成员变量, set 和 get
-        Demo5();
-        System.out.println("===============================================");
-
-        //Demo6: 通过Java反射机制得到类的一些属性： 继承的接口，父类，函数信息，成员信息，类型等
-        Demo6();
-        System.out.println("===============================================");
+//        Demo1();
+//        System.out.println("===============================================");
+//
+//        //Demo2.  验证所有的类都是Class类的实例对象
+//        Demo2();
+//        System.out.println("===============================================");
+//
+//        //Demo3.  通过Java反射机制，用Class 创建类对象[这也就是反射存在的意义所在]，无参构造
+//        Demo3();
+//        System.out.println("===============================================");
+//
+//        //Demo4:  通过Java反射机制得到一个类的构造函数，并实现构造带参实例对象
+//        Demo4();
+//        System.out.println("===============================================");
+//
+//        //Demo5:  通过Java反射机制操作成员变量, set 和 get
+//        Demo5();
+//        System.out.println("===============================================");
+//
+//        //Demo6: 通过Java反射机制得到类的一些属性： 继承的接口，父类，函数信息，成员信息，类型等
+//        Demo6();
+//        System.out.println("===============================================");
 
         //Demo7: 通过Java反射机制调用类中方法
         Demo7();
         System.out.println("===============================================");
 
         //Demo8: 通过Java反射机制获得类加载器
-        Demo8();
-        System.out.println("===============================================");
+//        Demo8();
+//        System.out.println("===============================================");
 
     }
 
@@ -101,6 +101,7 @@ public class ReflectMethod {
         person1.setAge(30);
         person1.setName("leeFeng");
 
+        //constructor onject that have two params:  age and name
         person2 = (Person) constructors[1].newInstance(20, "leeFeng");
 
         System.out.println("Demo4: " + person1.getName() + " : " + person1.getAge()
@@ -181,6 +182,9 @@ public class ReflectMethod {
         System.out.println("调用有参方法walk(int m)：");
         method = class1.getMethod("walk", int.class);
         method.invoke(class1.newInstance(), 100);
+
+        method.invoke(new SuperMan(), 666); // 这个方法和上面的一样
+
     }
 
     /**

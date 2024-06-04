@@ -1,6 +1,5 @@
 package pattern.proxy.xiangxue;
 
-//import sun.misc.ProxyGenerator;
 
 import sun.misc.ProxyGenerator;
 
@@ -12,15 +11,15 @@ public class DynamicProxyTest {
     public static void main(String[] args) {
 
         ZhangYuXin zyxHello = new ZhangYuXin();
-        ZhangYuXinProxy zhangYuXin = new ZhangYuXinProxy(zyxHello);
-        zhangYuXin.sayHello();
+//        ZhangYuXinProxy zhangYuXin = new ZhangYuXinProxy(zyxHello);
+//        zhangYuXin.sayHello("hello");
 
 
         System.out.println("--------------------\n");
 
         DoSomeThingDynamic say1 = new DoSomeThingDynamic(zyxHello);
         ZyxInterface zyxProxy = say1.create(ZyxInterface.class);
-        zyxProxy.sayHello();
+        zyxProxy.sayHello("John");
 
         System.out.println("---------------------\n");
 
@@ -30,16 +29,19 @@ public class DynamicProxyTest {
         bbProxy.sayBye();
 
 
-        byte[] classFile = ProxyGenerator.generateProxyClass("BinInterface$0", new Class[]{ZyxInterface.class});
-        try {
-            FileOutputStream out = new FileOutputStream( "BinInterface$0.class");
-            out.write(classFile);
-            out.flush();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        /**
+         * 生成代理类的，并且输出字节码
+         */
+//        byte[] classFile = ProxyGenerator.generateProxyClass("BinInterface$0", new Class[]{ZyxInterface.class});
+//        try {
+//            FileOutputStream out = new FileOutputStream( "BinInterface$0.class");
+//            out.write(classFile);
+//            out.flush();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
 

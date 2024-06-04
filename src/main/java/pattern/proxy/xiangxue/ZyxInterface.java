@@ -1,5 +1,5 @@
 package pattern.proxy.xiangxue;
 
 public interface ZyxInterface {
-    void sayHello();
+    void sayHello(String name);
 }
