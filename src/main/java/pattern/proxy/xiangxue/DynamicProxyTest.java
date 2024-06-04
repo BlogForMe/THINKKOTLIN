@@ -32,16 +32,16 @@ public class DynamicProxyTest {
         /**
          * 生成代理类的，并且输出字节码
          */
-//        byte[] classFile = ProxyGenerator.generateProxyClass("BinInterface$0", new Class[]{ZyxInterface.class});
-//        try {
-//            FileOutputStream out = new FileOutputStream( "BinInterface$0.class");
-//            out.write(classFile);
-//            out.flush();
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        byte[] classFile = ProxyGenerator.generateProxyClass("BinInterface$0", new Class[]{ZyxInterface.class});
+        try {
+            FileOutputStream out = new FileOutputStream( "BinInterface$0.class");
+            out.write(classFile);
+            out.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 
