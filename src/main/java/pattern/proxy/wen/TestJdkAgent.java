@@ -1,6 +1,7 @@
 package pattern.proxy.wen;
 
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
@@ -9,7 +10,7 @@ public class TestJdkAgent {
 
 
         /**
-         * 方式2
+         * 方式1
          */
         Target proxy = (Target) Proxy.newProxyInstance(TestJdkAgent.class.getClassLoader(), new TargetDog().getClass().getInterfaces(), new java.lang.reflect.InvocationHandler() {
             @Override
@@ -28,14 +29,21 @@ public class TestJdkAgent {
 
 
         /**
-         * stimulate Jdk dynamic proxy 方式1
+         * stimulate Jdk dynamic proxy 方式2
          */
         ProxyDog proxyDog = new ProxyDog(new InvocationHandler() {
             @Override
-            public void invoke() {
+            public void invoke(Method method, Object[] args) {
                 //enhancement feature
                 System.out.println("before");
-                new TargetDog().eat();
+//                new TargetDog().eat();
+                try {
+                    method.invoke(new TargetDog(),args);
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                } catch (InvocationTargetException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
         proxyDog.eat();
@@ -68,7 +76,7 @@ class TargetDog implements Target {
 
 
 interface InvocationHandler {
-    void invoke();
+    void invoke(Method method,Object[] args);
 }
 
 
