@@ -15,6 +15,6 @@ public class ProxyDog  implements Target{
 
     @Override
     public void drink() {
-
+        h.invoke();
     }
 }

@@ -1,12 +1,16 @@
 package pattern.proxy.wen;
 
 
-
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 public class TestJdkAgent {
     public static void main(String[] args) {
 
 
+        /**
+         * 方式1
+         */
         ProxyDog proxyDog = new ProxyDog(new InvocationHandler() {
             @Override
             public void invoke() {
@@ -16,8 +20,25 @@ public class TestJdkAgent {
             }
         });
         proxyDog.eat();
-        proxyDog.drink();
+        proxyDog.drink();  //从这里看，没法区分是eat() 还是 drink()
 
+
+        /**
+         * 方式2
+         */
+        Object proxy = Proxy.newProxyInstance(TestJdkAgent.class.getClassLoader(), new TargetDog().getClass().getInterfaces(), new java.lang.reflect.InvocationHandler() {
+            @Override
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                //1. 前置增强逻辑
+                System.out.println("before...");
+                /**
+                 * 2. 目标对象的原始方法
+                 * 目标对象，方法
+                 */
+                Object invoke = method.invoke(new TargetDog(), args);
+                return invoke;
+            }
+        });
     }
 
 }
