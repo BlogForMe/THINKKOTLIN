@@ -26,7 +26,7 @@ public class TestJdkAgent {
         /**
          * 方式2
          */
-        Object proxy = Proxy.newProxyInstance(TestJdkAgent.class.getClassLoader(), new TargetDog().getClass().getInterfaces(), new java.lang.reflect.InvocationHandler() {
+        Target proxy = (Target) Proxy.newProxyInstance(TestJdkAgent.class.getClassLoader(), new TargetDog().getClass().getInterfaces(), new java.lang.reflect.InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 //1. 前置增强逻辑
@@ -35,21 +35,23 @@ public class TestJdkAgent {
                  * 2. 目标对象的原始方法
                  * 目标对象，方法
                  */
-                Object invoke = method.invoke(new TargetDog(), args);
-                return invoke;
+                Object obj = method.invoke(new TargetDog(), args);
+                return obj;
             }
         });
+        proxy.eat();
     }
 
 }
 
-interface Target{
+interface Target {
     void eat();
+
     void drink();
 }
 
 
-class TargetDog implements Target{
+class TargetDog implements Target {
 
     @Override
     public void eat() {
@@ -63,7 +65,7 @@ class TargetDog implements Target{
 }
 
 
-interface InvocationHandler{
+interface InvocationHandler {
     void invoke();
 }
 
