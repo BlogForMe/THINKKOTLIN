@@ -32,24 +32,24 @@ public class TestJdkAgent {
         /**
          * stimulate Jdk dynamic proxy 方式2
          */
-        ProxyDog proxyDog = new ProxyDog(new InvocationHandler() {
-
-            @Override
-            public Object invoke(Object proxy, Method method, Object[] args) {
-                //enhancement feature
-                System.out.println("before");
-//                new TargetDog().eat();
-                try {
-                    return method.invoke(new TargetDog(), args);
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                } catch (InvocationTargetException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        });
-        proxyDog.eat();
-        proxyDog.drink();
+//        ProxyDog proxyDog = new ProxyDog(new InvocationHandler() {
+//
+//            @Override
+//            public Object invoke(Object proxy, Method method, Object[] args) {
+//                //enhancement feature
+//                System.out.println("before");
+////                new TargetDog().eat();
+//                try {
+//                    return method.invoke(new TargetDog(), args);
+//                } catch (IllegalAccessException e) {
+//                    throw new RuntimeException(e);
+//                } catch (InvocationTargetException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        });
+//        proxyDog.eat();
+//        proxyDog.drink();
 
     }
 
