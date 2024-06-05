@@ -12,20 +12,20 @@ public class TestJdkAgent {
         /**
          * 方式1
          */
-        Target proxy = (Target) Proxy.newProxyInstance(TestJdkAgent.class.getClassLoader(), new TargetDog().getClass().getInterfaces(), new java.lang.reflect.InvocationHandler() {
-            @Override
-            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                //1. 前置增强逻辑
-                System.out.println("before...");
-                /**
-                 * 2. 目标对象的原始方法
-                 * 目标对象，方法
-                 */
-                Object obj = method.invoke(new TargetDog(), args);
-                return obj;
-            }
-        });
-        proxy.eat();
+//        Target proxy = (Target) Proxy.newProxyInstance(TestJdkAgent.class.getClassLoader(), new TargetDog().getClass().getInterfaces(), new java.lang.reflect.InvocationHandler() {
+//            @Override
+//            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//                //1. 前置增强逻辑
+//                System.out.println("before...");
+//                /**
+//                 * 2. 目标对象的原始方法
+//                 * 目标对象，方法
+//                 */
+//                Object obj = method.invoke(new TargetDog(), args);
+//                return obj;
+//            }
+//        });
+//        proxy.eat();
 
 
         /**
@@ -65,12 +65,12 @@ class TargetDog implements Target {
 
     @Override
     public void eat() {
-        System.out.println("eat shit");
+        System.out.println("dog eat shit");
     }
 
     @Override
     public void drink() {
-        System.out.println("drink");
+        System.out.println("dog drink");
     }
 }
 

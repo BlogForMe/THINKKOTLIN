@@ -13,7 +13,7 @@ public class ProxyDog implements Target {
     @Override
     public void eat() {
         try {
-            Method eat = TestJdkAgent.class.getMethod("eat");
+            Method eat = Target.class.getMethod("eat");
             h.invoke(eat, new Object[0]);
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
@@ -23,7 +23,7 @@ public class ProxyDog implements Target {
     @Override
     public void drink() {
         try {
-            Method drink = TestJdkAgent.class.getMethod("drink");
+            Method drink = Target.class.getMethod("drink");
             h.invoke(drink, new Object[0]);
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
