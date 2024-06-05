@@ -94,73 +94,72 @@ public class ReflectMethod {
         Class<?> clazz = Person.class;
 
         // Get the constructors of the class
-//        Constructor<?>[] constructors = clazz.getConstructors(); // all constructor methods
-//
-//        // Iterate over constructors and print parameter types
-//        for (Constructor<?> constructor : constructors) {
-//            System.out.println("Constructor: " + constructor);
-//
-//            // Get parameter types
-//            Class<?>[] parameterTypes = constructor.getParameterTypes();
-//
-//            for (Class<?> paramType : parameterTypes) {
-//                System.out.println("Parameter type: " + paramType.getName());
-//            }
-//
-//            // Alternatively, you can use Parameter class to get more details
-//            Parameter[] parameters = constructor.getParameters();
-//
-//            for (Parameter parameter : parameters) {
-//                System.out.println("Parameter: " + parameter.getName() + ", Type: " + parameter.getType());
-//            }
-//            System.out.println();
-//        }
+        Constructor<?>[] constructors = clazz.getConstructors(); // all constructor methods
+
+        // Iterate over constructors and print parameter types
+        for (Constructor<?> constructor : constructors) {
+            System.out.println("Constructor: " + constructor);
+
+            // Get parameter types
+            Class<?>[] parameterTypes = constructor.getParameterTypes();
+
+            for (Class<?> paramType : parameterTypes) {
+                System.out.println("Parameter type: " + paramType.getName());
+            }
+
+            // Alternatively, you can use Parameter class to get more details
+            Parameter[] parameters = constructor.getParameters();
+
+            for (Parameter parameter : parameters) {
+                System.out.println("Parameter: " + parameter.getName() + ", Type: " + parameter.getType());
+            }
+            System.out.println();
+        }
 
 
         try {
-
             /**
-             * 创建 public Person(int age) 构造方法
+             *  public Person(String name) 构造方法 Create 对象
              */
-
             final Class<?>[] stringParam =
                     {String.class};
             final Constructor<?> consString = Person.class.getConstructor(stringParam);
-            Person personString = (Person)consString.newInstance(new Object[]{"john"});
-            System.out.println("stringParam "+personString);
+            Person personString = (Person) consString.newInstance(new Object[]{99});
+            System.out.println("stringParam " + personString);
 
 
+            /**
+             *  public Person(int age, String name) 构造方法 Create 对象
+             */
             final Class<?>[] stringIntParam =
-                    {int.class,String.class};
+                    {int.class, String.class};
             final Constructor<?> consStringInt = Person.class.getConstructor(stringIntParam);
-            Person person1 = (Person)consStringInt.newInstance(new Object[]{99,"john"});
-            System.out.println("stringIntParam "+person1);
-
-
+            Person person1 = (Person) consStringInt.newInstance(new Object[]{99, "john"});
+            System.out.println("stringIntParam " + person1);
 
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
 
 
-//        Class<?> class1 = null;
-//        Person person1 = null;
-//        Person person2 = null;
-//
-//        class1 = Class.forName("reflection.Person");
-//        //得到一系列构造函数集合
-//        Constructor<?>[] constructors1 = class1.getConstructors();
-//
-//        person1 = (Person) constructors1[0].newInstance();
-//        person1.setAge(30);
-//        person1.setName("leeFeng");
-//
-//        //constructor onject that have two params:  age and name
-//        person2 = (Person) constructors1[1].newInstance(20, "leeFeng");
-//
-//        System.out.println("Demo4: " + person1.getName() + " : " + person1.getAge()
-//                + "  ,   " + person2.getName() + " : " + person2.getAge()
-//        );
+        Class<?> class1 = null;
+        Person person1 = null;
+        Person person2 = null;
+
+        class1 = Class.forName("reflection.Person");
+        //得到一系列构造函数集合
+        Constructor<?>[] constructors1 = class1.getConstructors();
+
+        person1 = (Person) constructors1[0].newInstance();
+        person1.setAge(30);
+        person1.setName("leeFeng");
+
+        //constructor onject that have two params:  age and name
+        person2 = (Person) constructors1[1].newInstance(20, "leeFeng");
+
+        System.out.println("Demo4: " + person1.getName() + " : " + person1.getAge()
+                + "  ,   " + person2.getName() + " : " + person2.getAge()
+        );
 
 
     }
