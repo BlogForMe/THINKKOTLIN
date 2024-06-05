@@ -12,4 +12,9 @@ public class ProxyDog  implements Target{
     public void eat() {
         h.invoke();
     }
+
+    @Override
+    public void drink() {
+
+    }
 }

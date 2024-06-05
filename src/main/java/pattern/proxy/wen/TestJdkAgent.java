@@ -5,7 +5,9 @@ package pattern.proxy.wen;
 
 public class TestJdkAgent {
     public static void main(String[] args) {
-        new ProxyDog(new InvocationHandler() {
+
+
+        ProxyDog proxyDog = new ProxyDog(new InvocationHandler() {
             @Override
             public void invoke() {
                 //enhancement feature
@@ -13,7 +15,8 @@ public class TestJdkAgent {
                 new TargetDog().eat();
             }
         });
-
+        proxyDog.eat();
+        proxyDog.drink();
 
     }
 
@@ -21,6 +24,7 @@ public class TestJdkAgent {
 
 interface Target{
     void eat();
+    void drink();
 }
 
 
@@ -28,7 +32,12 @@ class TargetDog implements Target{
 
     @Override
     public void eat() {
-        System.out.println("够吃 shit");
+        System.out.println("eat shit");
+    }
+
+    @Override
+    public void drink() {
+        System.out.println("drink");
     }
 }
 
