@@ -1,21 +1,34 @@
 package pattern.proxy.wen;
 
+import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public class ProxyDog implements Target {
 
     InvocationHandler h;
 
+
     public ProxyDog(InvocationHandler h) {
         this.h = h;
+    }
+
+    static Method eat;
+    static Method drink;
+
+    static {
+        try {
+            eat = Target.class.getMethod("eat");
+            drink = Target.class.getMethod("drink");
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public void eat() {
         try {
-            Method eat = Target.class.getMethod("eat");
-            h.invoke(eat, new Object[0]);
-        } catch (NoSuchMethodException e) {
+            h.invoke(this,eat, new Object[0]);
+        } catch (Throwable e) {
             throw new RuntimeException(e);
         }
     }
@@ -23,9 +36,8 @@ public class ProxyDog implements Target {
     @Override
     public void drink() {
         try {
-            Method drink = Target.class.getMethod("drink");
-            h.invoke(drink, new Object[0]);
-        } catch (NoSuchMethodException e) {
+            h.invoke(this,drink, new Object[0]);
+        } catch (Throwable e) {
             throw new RuntimeException(e);
         }
     }
