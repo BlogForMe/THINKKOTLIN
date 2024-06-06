@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 /**
  * 反射读取注解的信息，模拟处理注解信息流程
  */
-public class Demo03 {
+public class DemoTest03 {
     public static void main(String[] args) {
 
         try {
